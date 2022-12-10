@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgba(0, 0, 0);
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width: 0; */
+    background-color: rgb(30, 30, 30);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(253, 0, 0);
+    border-radius: 20px;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    background: rgba(0, 0, 0);
+    color: white;
+}
+
+.barra-1-container {
+    background-color: rgb(44, 43, 43);
+    color: #fff;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-1-primero {
+    max-width: 1300px;
+    margin: auto;
+    padding: auto;
+}
+
+.barra-1-primero {
+    /* background-color: rgb(44, 43, 43, 0.5); */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.barra-1-logo {
+    margin-left: 15px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.barra-1-texto {
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+}
+
+.barra-1-menu a:hover {
+    color: aqua;
+    border-bottom: 1px solid aqua;
+    padding-bottom: 10px;
+}
+
+.container-menu {
+    height: 90vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    color: white;
+    padding: 15px;
+}
+.container-menu h1,
+.container-menu p {
+    padding-bottom: 15px;
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.botones button {
+    background: white;
+    color: black;
+    width: 40%;
+    height: 2.9rem;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.botones svg {
+    width: 30px;
+    height: 30px;
+    stroke: black;
+}
+
+.container-carucel h1,
+.container-carucel-1 h1 {
+    font-size: 25px;
+    padding: 2%;
+}
+
+.container-lista,
+.container-lista-1 {
+    margin: 0 5% 0 5%;
+    position: relative;
+}
+
+.lista,
+.lista-1 {
+    overflow: hidden;
+}
+
+
+.lista-left,
+.lista-right,
+.lista-right-1,
+.lista-left-1 {
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    top: 50%;
+    color: white;
+}
+
+.lista-left,
+.lista-left-1 {
+    left: -50px;
+}
+
+.lista-right,
+.lista-right-1 {
+    right: -50px;
+}
+
+.lista-left svg,
+.lista-left-1 svg,
+.lista-right svg,
+.lista-right-1 svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+footer .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center
+}
+
+footer .container h1 {
+    font-size: 16px
+}
+
+/* .active {
+    border-bottom: solid 5px rgb(0, 0, 0);
+} */
+.lista img:hover,
+.lista-1 img:hover {
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
+
+.container-carucel {
+    z-index: 100;
+}
+
+.container-carucel-1 {
+    z-index: 200;
+}
+
+.reproducir,
+.info {
+    cursor: pointer;
+}
+
+.reproducir:hover,
+.info:hover {
+    background-color: rgb(255, 255, 255, .1);
+    color: white;
+}
+
+.activo-perfil {
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(59, 59, 59, 0.5), rgba(0, 0, 0, 0.5)), url("../img/wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 15px;
+}
+
+.padre-perfiles {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px;
+    margin: 25px;
+}
+
+.activo-perfil img {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.activo-perfil img:hover {
+    border: 5px solid red;
+}
+
+.desactivar {
+    display: none;
+}
+
+
+@media (min-width:720px) {
+
+    .reproducir {
+        font-size: 2vw;
+    }
+
+    .barra-1-primero {
+        background-color: rgb(44, 43, 43, 0.5);
+        height: 4em;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .barra-1-logo {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        color: red;
+        font-size: 25px;
+        text-align: center;
+        align-items: center;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .barra-1-logo:hover {
+        color: white;
+    }
+    img {
+        width: 30px;
+    }
+
+    .barra-1 nav {
+        flex-direction: none;
+        text-align: center;
+    }
+
+    .barra-1-texto {
+        font-size: 16px;
+    }
+
+    .barra-1-menu a:hover {
+        color: red;
+        border-bottom: 1px solid red;
+        padding-bottom: 10px;
+    }
+
+    .barra-1-menu {
+        margin-right: 20px;
+    }
+
+    .container-menu {
+        display: flex;
+        height: 90vh;
+        align-items: start;
+        padding-left: 50px;
+    }
+
+    .container-menu h1 {
+        padding-bottom: 15px;
+    }
+
+    .container-menu p {
+        padding-bottom: 15px;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .container-menu-2 {
+        width: 40%;
+        margin-bottom: calc(100% - 90%);
+    }
+
+    .activo-perfil {
+        height: 100vh;
+        background-image: linear-gradient(0deg, rgba(59, 59, 59, 0.5), rgba(0, 0, 0, 0.5)), url("../img/wallpaper.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        padding: 15px;
+    }
+    .padre-perfiles {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding: 25px;
+        margin: 25px;
+    }
+    
+    .activo-perfil img {
+        width: 20vh;
+        height: 20vh;
+        border-radius: 50%;
+        border: 5px solid black;
+    }
+    
+    .activo-perfil img:hover {
+        border: 5px solid red;
+    }
+
+    .desactivar {
+        display: none;
+    }
+    footer h1 {
+        font-size: 12px;
+    }
+
+    .container-carucel {
+        font-size: 16px;
+    }
+
+    .botones button {
+        font-size: 10px;
+    }
+
+    .lista-left svg,
+    .lista-right svg,
+    .lista-left-1 svg,
+    .lista-right-1 svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .lista-left,
+    .lista-left-1 {
+        left: -30px;
+    }
+    .lista-right,
+    .lista-right-1 {
+        right: -30px;
+    }
+    .botones {
+        justify-content: center;
+        align-items: center;
+    }
+    .botones button {
+        width: 30%;
+    }
+}
+
+@media(max-width:700px) {
+    .container-menu p {
+        font-size: 3vw;
+    }
+    .botones button {
+        font-size: 10px;
+    }
+    .botones svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .lista-left svg,
+    .lista-right svg,
+    .lista-left-1 svg,
+    .lista-right-1 svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .lista-left,
+    .lista-left-1 {
+        top: 20px;
+        left: -30px;
+    }
+    .lista-right,
+    .lista-right-1 {
+        top: 20px;
+        right: -30px;
+    }
+    footer .container h1 {
+        font-size: 10px;
+    }
+    .container-carucel h1,
+    .container-carucel-1 h1 {
+        font-size: 16px;
+    }
+    .container-lista,
+    .container-lista-1 {
+        margin: 0 10% 0 10%;
+    }
+    .botones {
+        justify-content: center;
+        align-items: center;
+    }
+    .container-menu-2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .barra-1-texto {
+        font-size: 3vw;
+    }
+
+}
