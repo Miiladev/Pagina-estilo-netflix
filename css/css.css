@@ -402,7 +402,8 @@ footer .container h1 {
         align-items: center;
     }
     .botones button {
-        width: 30%;
+        width: 50%;
+        font-size: 16px;
     }
 }
 
